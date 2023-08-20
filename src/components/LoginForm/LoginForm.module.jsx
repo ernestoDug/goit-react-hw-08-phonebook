@@ -66,7 +66,7 @@ export const LinkForLogStyle = styled(NavLink)`
   letter-spacing: 3px;
   transform: rotate(-9deg);
   border: 2px dashed #ffb841;
-
+transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
   cursor: pointer;
 
   :hover,
@@ -79,6 +79,8 @@ export const LinkForLogStyle = styled(NavLink)`
     rgba(68, 159, 214, 1) 60%,
     rgba(0, 168, 255, 1) 100%
   );
+  transform: rotate(0);
+
   }
 `;
 

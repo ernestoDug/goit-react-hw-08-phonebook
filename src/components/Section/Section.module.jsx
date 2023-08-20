@@ -7,7 +7,7 @@ export const SectionWrStyle = styled.section`
   border-radius: 20px/60px;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
-  background-image: url('https://fons.pibig.info/uploads/posts/2023-06/1686153807_fons-pibig-info-p-tekstura-rubashki-v-kletku-instagram-30.jpg');
+  background-image: url('https://img4.cliparto.com/pic/xl/186155/6359708-jeans-torn-denim-texture.jpg');
 `;
 
 
@@ -15,6 +15,7 @@ export const TitleStyle = styled.h2`
   font-weight: 800;
   font-size: 40px;
   color: #e3dcea;
+  letter-spacing: 5px;
   text-shadow: 
     2px 2px 2px #c48e06, 
     0 2px 2px #8c1b21, 

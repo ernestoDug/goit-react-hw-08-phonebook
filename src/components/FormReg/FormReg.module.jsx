@@ -69,19 +69,26 @@ export const LinkForLog = styled(NavLink)`
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 3px;
   transform: rotate(-7deg);
-  border: 2px dashed #ffb841;
+  border: 4px dashed #ffb841;
   transition: transform 200ms cubic-bezier(0.6, 0, 0.4, 1);
 
   cursor: pointer;
 
   :hover,
   :focus {
+    border: 4px dashed #e3620c;
+
     color: #f4f6f3;
     background-image: none;
-    background-color: #a158c5;
+    background: linear-gradient(
+      90deg,
+      rgba(60, 119, 204, 1) 31%,
+      rgba(68, 159, 214, 1) 60%,
+      rgba(0, 168, 255, 1) 100%
+    );
     transform: scale(1.1);
   }
-`;
+  `;
 
 // кнопка
 export const ButtonStyle = styled.button`
@@ -91,7 +98,7 @@ export const ButtonStyle = styled.button`
   align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 15px 5px;
-  padding: 25px;
+  padding: 10px;
   color: #533505;
   background-image: url('https://img.freepik.com/premium-photo/denim-texture-denim-background-denim-jeans-denim-fabric-denim-surface-blue-jeans-jeans-texture-jeans-background-jeans-fabric-jeans-textile-old-denim-jeans-dark-edged-xa-xa_30824-172.jpg');
   background-size: 97%;
@@ -99,7 +106,7 @@ export const ButtonStyle = styled.button`
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
   border-radius: 20px/60px;
   cursor: pointer;
-  border: 2px dashed #ffb841;
+  border: 4px dashed #ffb841;
 
   transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 200ms cubic-bezier(0.6, 0, 0.4, 1);
@@ -108,7 +115,7 @@ export const ButtonStyle = styled.button`
   :hover,
   :focus {
     color: #e9e9e0;
-    border: 2px dashed #e3620c;
+    border: 4px dashed #e3620c;
     background-image: none;
     background: linear-gradient(
       90deg,

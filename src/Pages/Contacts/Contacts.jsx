@@ -10,11 +10,11 @@ import { Filter } from '../../components/Filter/Filter';
 import { ContactList } from '../../components/ContactList/ContactList';
 import {
   // AddUserIcon,
-  Button,
-  ContactNavWrapper,
-  ContentPageContainer,
-  FilterWrapper,
-  Title,
+  ButtonStyle,
+  WpapStyle,
+  NavStyle,
+  FiltrWrStyle,
+  TitleStyle,
 } from './Contacts.module';
 import { Modal } from 'components/Modal/Modal';
 
@@ -33,19 +33,18 @@ const Contacts = () => {
   };
 
   return (
-    <ContentPageContainer>
+    <WpapStyle>
+        {isLoading && !error && <b>🚛Завантажую...🚧</b>}
       <Section>
-        <ContactNavWrapper>
-          <Title>Contacts</Title>
-          <FilterWrapper>
-            <Filter />
-            <Button type="button" onClick={handleOpenModal}>
-              {/* <AddUserIcon /> */}
-              New Contact
-            </Button>
-          </FilterWrapper>
-        </ContactNavWrapper>
-        {isLoading && !error && <b>Request in progress</b>}
+        <NavStyle>
+          <TitleStyle>Контакти 📑</TitleStyle>
+          <FiltrWrStyle>
+            <Filter/>
+            <ButtonStyle type="button" onClick={handleOpenModal}>
+                 Новий контакт ⭐
+            </ButtonStyle>
+          </FiltrWrStyle>
+        </NavStyle>
         <ContactList />
       </Section>
       {isShowModalAddUser && (
@@ -58,7 +57,7 @@ const Contacts = () => {
           onCloseModal={handleOpenModal}
         ></Modal>
       )}
-    </ContentPageContainer>
+    </WpapStyle>
   );
 };
 
