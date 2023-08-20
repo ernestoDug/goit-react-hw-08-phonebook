@@ -35,10 +35,10 @@ export const LinkForLogStyle = styled(NavLink)`
 
   :hover,
   :focus {
-    color: #a2e2f3;
+    color: #086b39;
     border: 2px dashed #e3620c;
     transform: scale(1.1);
     background-image: none;
-    background-color: green;
+    background: radial-gradient(circle, rgba(61,209,98,1) 27%, rgba(160,241,167,1) 64%, rgba(68,214,136,1) 100%);
   }
 `;

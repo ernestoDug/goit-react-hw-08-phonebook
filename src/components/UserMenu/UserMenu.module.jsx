@@ -1,67 +1,92 @@
 import styled from '@emotion/styled';
 
-export const UserNavigarion = styled.div`
+export const AvDivStyle = styled.div`
+  display: flex;
+  padding-right: 15px;
+  padding-top: 5px;
+  margin-right: 18px;
+  border: 2px dashed #ffb841;
+  border-right: 4px dashed #ffb841;
+  border-radius: 20px/60px;
+`;
+export const NavStyle = styled.div`
   display: flex;
   margin-left: auto;
+  padding-right: 18px;
+  padding-bottom: 10px;
 `;
-export const UserWrapper = styled.div`
+
+// ім'я
+export const NameStyle = styled.p`
+  font-weight: 800;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-right: 18px;
+  margin-top: 18px;
+  text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #8c1b21, -2px 0 2px #8c1b21,
+    0 -2px 2px #8c1b21, 3px 3px 2px #8c1b21, 0 3px 2px #8c1b21,
+    -3px 0 2px #8c1b21, 0 -3px 2px #8c1b21, 4px 4px 2px #8c1b21,
+    0 4px 2px #8c1b21, -4px 0 2px #8c1b21, 0 -4px 2px #8c1b21;
+  text-align: center;
+  color: #cf8b16;
+`;
+// пошта
+export const EmailStyle = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+  color: #e3f4e5;
+  margin-left: 15px;
+`;
+
+// для авочки
+export const AvStyle = styled.div`
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(
+    circle,
+    rgba(233, 179, 38, 1) 27%,
+    #5e5331 64%,
+    #dcbc6a 100%
+  );
+  border-radius: 24px;
+  border: 1px solid white;
+  margin-top: 7px;
+`;
+
+export const BtnStyle = styled.button`
   display: flex;
+  font-size: 20px;
+  font-weight: 700;
   align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  color: #e9e9e0;
+  text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #8c1b21, -2px 0 2px #ebe413,
+    0 -2px 2px #8c1b21, 3px 3px 2px #e6db0e, 0 3px 2px #8c1b21,
+    -3px 0 2px #dcca30, 0 -3px 2px #8c1b21, 4px 4px 2px #8c1b21,
+    0 4px 2px #8c1b21, -4px 0 2px #dcb424, 0 -4px 2px #8c1b21;
 
-  gap: 12px;
-  margin-right: 32px;
-
-  > div {
-    display: grid;
-    align-items: center;
-    gap: 6px;
-  }
-`;
-
-export const UserName = styled.p`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-
-  text-align: right;
-
-  color: #000000;
-`;
-export const UserEmail = styled.p`
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-
-  text-align: right;
-
-  color: #8f8f8f;
-`;
-
-export const UserAvatar = styled.div`
-  width: 58px;
-  height: 58px;
-
-  background-color: #efefef;
-  border-radius: 14px;
-`;
-export const LogOutBtn = styled.button`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-
-  padding: 18px 26px;
-
-  color: #ffffff;
-  background-color: #000000;
-
-  border: 1px solid #fabb18;
-  border-radius: 14px;
-
+  background: radial-gradient(
+    circle,
+    rgba(233, 179, 38, 1) 27%,
+    #5e5331 64%,
+    #dcbc6a 100%
+  );
+  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
+    10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 80px/80px;
   cursor: pointer;
 
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 200ms cubic-bezier(0.6, 0, 0.4, 1);
+  transition: transform 200ms cubic-bezier(0.6, 0, 0.4, 1);
   :hover,
   :focus {
-    color: #000000;
-    background: rgba(250, 187, 24, 0.1);
+    text-shadow: none;
+    color: #533505;
+    background-image: none;
+    background: linear-gradient(90deg, #b6a013 31%, #ecec08 60%, #dfa909 100%);
+    transform: scale(1.1);
   }
 `;

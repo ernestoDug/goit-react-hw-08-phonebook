@@ -52,13 +52,8 @@ export const InputStyle = styled.input`
   :placeholder {
     color: #314286;
   }
-  &:hover, 
-  &:focus{
-   background: linear-gradient(
-    90deg,
-    #dd90e5 31%,
-    #4ba6da 66%,
-    #2b89c3 100%
-   )
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #dd90e5 31%, #4ba6da 66%, #2b89c3 100%);
   }
 `;
