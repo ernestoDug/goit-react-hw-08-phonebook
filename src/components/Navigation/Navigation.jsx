@@ -1,30 +1,17 @@
 import { useAuth } from 'hooks/useAuth';
-import {
-  Logo,
-  MainNav,
-  MainNavItem,
-  MainNavLink,
-  MainNavList,
-} from './Navigation.module';
+import { LogoStyle, NavStyle, NavLinkStyle, SpanStyle, BodyStyle } from './Navigation.module';
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <>
-      <Logo to="/">
-        Phone<span>Book.</span>
-      </Logo>
-      <MainNav>
-        {isLoggedIn && (
-          <MainNavList>
-            <MainNavItem>
-              <MainNavLink to="/contacts">Contacts</MainNavLink>
-            </MainNavItem>
-          </MainNavList>
-        )}
-      </MainNav>
-    </>
+    <BodyStyle>
+      <LogoStyle to="/">☎️</LogoStyle>
+      {/* уомва переходу */}
+      <NavStyle>
+        {isLoggedIn && <NavLinkStyle to="/contacts"> <SpanStyle>Контакти </SpanStyle> 📑</NavLinkStyle>}
+      </NavStyle>
+    </BodyStyle>
   );
 };
 

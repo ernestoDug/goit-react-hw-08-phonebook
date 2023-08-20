@@ -6,7 +6,7 @@ export const BodyStyle = styled.section`
   border-radius: 20px/60px;
   border: 2px dashed #ffb841;
 `;
-
+// форма
 export const FormStyle = styled.form`
   display: flex;
   background-image: url('https://img.freepik.com/free-vector/jeans-texture-background_1053-120.jpg?w=740&t=st=1692460341~exp=1692460941~hmac=8328fc0d4ee8de30fcace9f0f45c61ac624d184733abdaa77901038d0c682448');
@@ -51,5 +51,14 @@ export const InputStyle = styled.input`
 
   :placeholder {
     color: #314286;
+  }
+  &:hover, 
+  &:focus{
+   background: linear-gradient(
+    90deg,
+    #dd90e5 31%,
+    #4ba6da 66%,
+    #2b89c3 100%
+   )
   }
 `;

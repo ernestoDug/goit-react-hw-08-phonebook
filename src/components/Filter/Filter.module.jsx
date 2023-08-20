@@ -5,7 +5,6 @@ export const BodyStyle = styled.section`
 background: #74500c;
 border-radius: 20px/60px;
 border: 2px dashed #ffb841;
-
 `;
 // лабель
 export const LabelStyle = styled.label`
@@ -41,5 +40,14 @@ export const InputStyle = styled.input`
 
   :placeholder {
     color: #314286;
+  }
+  &:hover, 
+  &:focus{
+   background: linear-gradient(
+    90deg,
+    #dd90e5 31%,
+    #4ba6da 66%,
+    #2b89c3 100%
+   )
   }
 `;

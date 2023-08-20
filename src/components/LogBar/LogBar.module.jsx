@@ -9,9 +9,9 @@ export const LogBarListStyle = styled.ul`
   margin-left: auto;
 `;
 // лішки
-export const LoggedItemStyle = styled.li``;
+export const ItemStyle = styled.li``;
 
-export const LoggedLinkStyle = styled(NavLink)`
+export const LinkForLogStyle = styled(NavLink)`
   display: flex;
   font-size: 16px;
   font-weight: 700;

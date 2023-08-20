@@ -1,32 +1,34 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { ModalContent, Overlay } from './Modal.module';
+import { OverlayStyle, ContentStyle } from './Modal.module';
 
 export const Modal = ({ children, onCloseModal }) => {
-  useEffect(() => {
-    const handleKeydown = e => {
-      if (e.code === 'Escape') {
-        onCloseModal();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeydown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeydown);
-    };
-  }, [onCloseModal]);
-
-  const handleBackdropClick = ({ target, currentTarget }) => {
+  // на закриття
+  const clicker = ({ target, currentTarget }) => {
     if (currentTarget === target) {
       onCloseModal();
     }
   };
 
+  // по іскейпу
+  useEffect(() => {
+    const keyClicker = event => {
+      if (event.code === 'Escape') {
+        onCloseModal();
+      }
+    };
+    // слухаю клаву
+    window.addEventListener('keydown', keyClicker);
+    // не слухаю
+    return () => {
+      window.removeEventListener('keydown', keyClicker);
+    };
+  }, [onCloseModal]);
+
   return (
-    <Overlay onClick={handleBackdropClick}>
-      <ModalContent>{children}</ModalContent>
-    </Overlay>
+    <OverlayStyle onClick={clicker}>
+      <ContentStyle>{children}</ContentStyle>
+    </OverlayStyle>
   );
 };
 

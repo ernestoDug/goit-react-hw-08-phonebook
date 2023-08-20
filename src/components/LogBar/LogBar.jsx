@@ -1,14 +1,14 @@
-import { LoggedItemStyle, LoggedLinkStyle, LogBarListStyle } from './LogBar.module';
+import { ItemStyle, LinkForLogStyle, LogBarListStyle } from './LogBar.module';
 
 const LogBar = () => {
   return (
     <LogBarListStyle>
-      <LoggedItemStyle>
-        <LoggedLinkStyle to="login">Логін</LoggedLinkStyle>
-      </LoggedItemStyle>
-      <LoggedItemStyle>
-        <LoggedLinkStyle to="register">Регістрація</LoggedLinkStyle>
-      </LoggedItemStyle>
+      <ItemStyle>
+        <LinkForLogStyle to="login">Логін</LinkForLogStyle>
+      </ItemStyle>
+      <ItemStyle>
+        <LinkForLogStyle to="register">Регістрація</LinkForLogStyle>
+      </ItemStyle>
     </LogBarListStyle>
   );
 };
