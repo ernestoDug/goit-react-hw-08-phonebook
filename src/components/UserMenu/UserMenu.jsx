@@ -12,6 +12,7 @@ import { useAuth } from 'hooks/useAuth';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
+  
   const { user } = useAuth();
 
   return (

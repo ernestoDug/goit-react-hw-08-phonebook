@@ -3,10 +3,11 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
+// токен
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
-
+// пока токен на всі запроси
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
@@ -20,6 +21,7 @@ export const refreshUser = createAsyncThunk(
     if (persistedToken === null)
       return thunkAPI.rejectWithValue('Не вдалося отримати данні користувача');
     try {
+      // токнимуся
       setAuthHeader(persistedToken);
       const { data } = await axios.get('/users/current');
       return data;
@@ -29,13 +31,14 @@ export const refreshUser = createAsyncThunk(
   }
 );
 
-
 // postReg
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post('/users/signup', credentials);
+      // credentials - після сабміту об'єкт
+            // токнимуся
       setAuthHeader(data.token);
       return data;
     } catch (error) {
@@ -50,6 +53,7 @@ export const logIn = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const { data } = await axios.post('/users/login', credentials);
+            // токнимуся
       setAuthHeader(data.token);
       return data;
     } catch (error) {
@@ -62,9 +66,9 @@ export const logIn = createAsyncThunk(
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await axios.post('/users/logout');
+    // пока токен
     clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
