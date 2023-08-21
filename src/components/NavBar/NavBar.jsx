@@ -1,5 +1,5 @@
 import { useAuth } from 'hooks/useAuth';
-import { LogoStyle, NavStyle, NavLinkStyle, SpanStyle, BodyStyle } from './NavBar.module';
+import { LogoStyle, NavContStyle, NavLinkStyle, SpanStyle, BodyStyle } from './NavBar.module';
 
 const NavBar = () => {
   const { isLoggedIn } = useAuth();
@@ -8,9 +8,9 @@ const NavBar = () => {
     <BodyStyle>
       <LogoStyle to="/">☎️</LogoStyle>
       {/* уомва переходу */}
-      <NavStyle>
+      <NavContStyle>
         {isLoggedIn && <NavLinkStyle to="/contacts"> <SpanStyle>Контакти </SpanStyle>📑</NavLinkStyle>}
-      </NavStyle>
+      </NavContStyle>
     </BodyStyle>
   );
 };

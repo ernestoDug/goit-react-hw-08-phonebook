@@ -45,3 +45,11 @@ ul {
 p {
   margin: 0;
 }
+
+
+.loadMesg
+{
+  color: rgb(42, 42, 115);
+  font-size: 20px;
+  font-weight: 700;
+}

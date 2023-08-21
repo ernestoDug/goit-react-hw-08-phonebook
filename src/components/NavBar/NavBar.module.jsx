@@ -28,7 +28,7 @@ export const LogoStyle = styled(NavLink)`
 `;
 
 // навчик
-export const NavStyle = styled.nav`
+export const NavContStyle = styled.nav`
   border: 2px dashed #ffb841;
   width: 200px;
   border-radius: 20px/60px;

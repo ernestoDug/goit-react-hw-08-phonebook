@@ -56,7 +56,7 @@ const LoginForm = () => {
           <InputStyle
             type="password"
             name="password"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+            // pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
             title="Пароль має містити принаймні одну цифру, одну велику та малу літери та не менше 8 символів.."
             required
             placeholder="Введіть пароль..."
