@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { deleteContact } from 'redux/constacts/operations';
+import { deleteContact } from 'redux/operations';
 
 import {
   ContactItemStyle,

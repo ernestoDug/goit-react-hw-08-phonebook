@@ -1,5 +1,7 @@
-// import { Notify } from 'notiflix';
-import {
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';import {
+
   BodyStyle,
   FormStyle,
   LabelStyle,
@@ -13,10 +15,10 @@ import { logIn } from 'redux/auth/operations';
 const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = event => {
+    event.preventDefault();
 
-    const form = e.currentTarget;
+    const form = event.currentTarget;
     dispatch(
       logIn({
         email: form.elements.email.value,
@@ -25,16 +27,29 @@ const LoginForm = () => {
     )
       .unwrap()
       .then(originalPromiseResult => {
-        // Notify.success(`${originalPromiseResult.user.name} welcome back!`);
+        toast.success(`🥁З Поверненням, друже ${originalPromiseResult.user.name}вітаємо вас🥁`);
+
       })
       .catch(() => {
-        // Notify.failure('Incorrect login or password');
+        toast.warn(`⛔Спробуйте ще, сталася помилка⛔`);
       });
 
     form.reset();
   };
 
   return (
+    <>  <ToastContainer
+    position="top-left"
+    autoClose={2000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="colored"
+  />
     <FormStyle onSubmit={handleSubmit} autoComplete="off">
       <BodyStyle>
         <LabelStyle>
@@ -42,11 +57,11 @@ const LoginForm = () => {
           <InputStyle
             type="email"
             name="email"
-            pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/."
-            title="Email may contain letters, numbers, an apostrophe, and must be followed by '@' domain name '.' domain suffix. For example Taras@ukr.ua, adrian@gmail.com, JacobM3rcer@hotmail.com"
+            // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/."
+            title="Електронна адреса може містити літери, цифри, апостроф і повинна супроводжуватися @"
             required
-            placeholder="Enter email ..."
-          />
+            placeholder="Введіть email ..."
+            />
         </LabelStyle>
       </BodyStyle>
 
@@ -67,6 +82,7 @@ const LoginForm = () => {
       <ButtonStyle type="submit">Vхід 🧵</ButtonStyle>
       <LinkForLogStyle to="/register">Ви ще не з нами, РЕЄСТРУЙТЕСЯ🎯</LinkForLogStyle>
     </FormStyle>
+    </>
   );
 };
 

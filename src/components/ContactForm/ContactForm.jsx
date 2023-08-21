@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import PropTypes from 'prop-types';
 import { selectContacts } from 'redux/selectors/selectors';
-import { addContact } from 'redux/constacts/operations';
+import { addContact } from 'redux/operations';
 
 import { FormStyle, LabelStyled, InputStyle, BodyStyle } from './FormStyle.module';
 import ButtonSbmt from 'components/ButtonSbmt/ButtonSbmt';

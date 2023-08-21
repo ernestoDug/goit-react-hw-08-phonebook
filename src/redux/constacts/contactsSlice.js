@@ -1,17 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from './operations';
-import { logOut } from 'redux/auth/operations';
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
+import { fetchContacts, addContact, deleteContact } from 'redux/operations';
 
-const handlePending = state => {
-  state.isLoading = true;
-};
+import {
+  STATUS,
+  pendinger,
+  fulfilderUniversall,
+  fulfilder,
+  fulfilderAdder,
+  fulfildDeliter,
+  rejecter,
+} from 'redux/servises/funcForSliseCont';
 
-const handleRejected = (state, action) => {
-  state.isLoading = false;
-  state.error = action.payload;
-};
+// саночна станція
+const operationsArray = [fetchContacts, addContact, deleteContact];
+// сортировка
+const operationType = type => operationsArray.map(operand => operand[type]);
 
-const contactsInitialState = {
+export const contactsInitialState = {
   items: [],
   isLoading: false,
   error: null,
@@ -20,37 +25,33 @@ const contactsInitialState = {
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: contactsInitialState,
-  extraReducers: {
-    [fetchContacts.pending]: handlePending,
-    [fetchContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-    [fetchContacts.rejected]: handleRejected,
-    [addContact.pending]: handlePending,
-    [addContact.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items.push(action.payload);
-    },
-    [addContact.rejected]: handleRejected,
-    [deleteContact.pending]: handlePending,
-    [deleteContact.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      const index = state.items.findIndex(
-        task => task.id === action.payload.id
+  extraReducers: builder => {
+    const { PENDING, FULLFILLED, REJECTED } = STATUS;
+
+    builder
+      // запит
+      .addCase(fetchContacts.fulfilled, fulfilder)
+      // додавання
+      .addCase(addContact.fulfilled, fulfilderAdder)
+      // видаляння
+      .addCase(deleteContact.fulfilled, fulfildDeliter)
+      // сгрупував пендінги
+      .addMatcher(isAnyOf(...operationType(PENDING)), pendinger)
+      // сгрупував викиди
+      .addMatcher(isAnyOf(...operationType(REJECTED)), rejecter)
+      .addMatcher(
+        isAnyOf(
+          // сгрупував Унфулфілди
+          ...operationType(FULLFILLED)
+        ),
+        fulfilderUniversall
       );
-      state.items.splice(index, 1);
-    },
-    [deleteContact.rejected]: handleRejected,
-    [logOut.fulfilled](state) {
-      state.items = [];
-      state.error = null;
-      state.isLoading = false;
-    },
   },
 });
 
 export const contactsReducer = contactsSlice.reducer;
+
+// { id: 'id-4', name: 'John Lennon', number: '09-10-19-40' },
+// { id: 'id-3', name: 'Paul McCartney', number: '18-07-19-42' },
+// { id: 'id-1', name: 'George Harrison', number: '25-02-19-43' },
+// { id: 'id-2', name: 'Ringo Starr', number: '07-07-19-40' },

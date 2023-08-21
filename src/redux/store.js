@@ -9,8 +9,8 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
+import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
 import { contactsReducer } from './constacts/contactsSlice';
 import { filtersReducer } from './constacts/filtersSlice';
@@ -31,6 +31,7 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
+    // обійми persistReducer АутХореда для закиду токена в лс
     auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
     filters: filtersReducer,

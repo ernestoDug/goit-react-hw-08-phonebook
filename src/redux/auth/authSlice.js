@@ -8,7 +8,7 @@ const initialState = {
   isRefreshing: false,
 };
 
-// успішне 
+// успішне лог та рег
 const fulfilder = (state, { payload }) => {
   state.user = payload.user;
   state.token = payload.token;
@@ -21,22 +21,22 @@ const fulfilderRefUser = (state, action) => {
   state.isRefreshing = false;
 };
 // успішний вихід
-const fulfilderLogOUT = state => {
+const fulfilderLogOUT = (state) => {
   state.user = { name: null, email: null };
   state.token = null;
   state.isLoggedIn = false;
 };
 
-// очикувач оновлення 
-const pendingerRefresh = state => {
+// очикувач оновлення
+const pendingerRefresh = (state) => {
   state.isRefreshing = true;
 };
 // облощик
-const rejector = state => {
+const rejector = (state) => {
   state.isRefreshing = false;
 };
 
-// аутoХосанки 
+// аутoХосанки
 const authSlice = createSlice({
   name: 'auth',
   initialState: initialState,
@@ -48,40 +48,7 @@ const authSlice = createSlice({
       .addCase(refreshUser.fulfilled, fulfilderRefUser)
       .addCase(refreshUser.pending, pendingerRefresh)
       .addCase(refreshUser.rejected, rejector);
-
-    //   [register.fulfilled](state, action) {
-    //     state.user = action.payload.user;
-    //     state.token = action.payload.token;
-    //     state.isLoggedIn = true;
-    //   },
-    // *********************
-
-    //   [logIn.fulfilled](state, action) {
-    //     state.user = action.payload.user;
-    //     state.token = action.payload.token;
-    //     state.isLoggedIn = true;
-    //   },
-    // ******************************************
-    //   [logOut.fulfilled](state) {
-    //     state.user = { name: null, email: null };
-    //     state.token = null;
-    //     state.isLoggedIn = false;
-    //   },
-    // ************************************
-    //   [refreshUser.fulfilled](state, action) {
-    //     state.user = action.payload;
-    //     state.isLoggedIn = true;
-    //     state.isRefreshing = false;
-    // *****************************************
-    //   [refreshUser.pending](state) {
-    //     state.isRefreshing = true;
-    //   },
-    //   },
-    // *****************************
-    //   [refreshUser.rejected](state) {
-    //     state.isRefreshing = false;
-    //   },
-    // *************************************
+    
   },
 });
 

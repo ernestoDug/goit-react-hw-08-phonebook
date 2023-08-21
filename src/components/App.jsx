@@ -19,13 +19,13 @@ export const App = () => {
   
   const { isRefreshing } = useAuth();
 
-  // 1 запит
+  //  запит 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b className='loadMesg' >Оновлення...</b>
+    <b className='loadMesg'> Оновлення...</b>
   ) : (
     <Routes>
       <Route path="/" element={<Layout/>}>
