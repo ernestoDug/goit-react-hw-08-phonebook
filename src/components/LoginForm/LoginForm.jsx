@@ -37,8 +37,8 @@ const LoginForm = () => {
         toast.warn(`⛔Спробуйте ще, сталася помилка⛔`);
       });
     form.reset();
-  };
-
+  }
+  
   return (
     <>
       {' '}

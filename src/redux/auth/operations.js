@@ -40,6 +40,7 @@ export const register = createAsyncThunk(
     try {
       const { data } = await axios.post('/users/signup', credentials);
       // credentials - після сабміту об'єкт
+      // console.log(credentials, 'crd');
       // ток
       setAuthHeader(data.token);
       return data;

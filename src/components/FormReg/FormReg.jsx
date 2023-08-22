@@ -27,7 +27,7 @@ const FormReg = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    )
+    ).unwrap()
       // ##########################/w
       .then(originalPromiseResult => {
         toast.success(`🥁${originalPromiseResult.user.name}вітаємо вас🥁`);
