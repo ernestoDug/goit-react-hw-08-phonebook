@@ -15,13 +15,12 @@ import {
 } from './FormReg.module';
 
 const FormReg = () => {
-
   const dispatch = useDispatch();
 
   const submiter = event => {
     event.preventDefault();
     const form = event.currentTarget;
-// закид обекта регістрації до credentials
+    // закид обекта регістрації до credentials
     dispatch(
       register({
         name: form.elements.name.value,
@@ -29,7 +28,7 @@ const FormReg = () => {
         password: form.elements.password.value,
       })
     )
-      .unwrap()
+      // ##########################/w
       .then(originalPromiseResult => {
         toast.success(`🥁${originalPromiseResult.user.name}вітаємо вас🥁`);
       })

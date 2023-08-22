@@ -36,7 +36,7 @@ export const ContactsListItem = ({ id, name, number }) => {
   return (
     <> 
     <ToastContainer
-    position="top-right"
+    position="top-left"
     autoClose={2000}
     hideProgressBar={false}
     newestOnTop={false}

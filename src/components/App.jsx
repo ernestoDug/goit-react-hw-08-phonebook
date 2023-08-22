@@ -19,7 +19,7 @@ export const App = () => {
   
   const { isRefreshing } = useAuth();
 
-  //  запит 
+  //  запит 1
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);

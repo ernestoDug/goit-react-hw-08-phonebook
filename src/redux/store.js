@@ -12,8 +12,8 @@ import {
 
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './auth/authSlice';
-import { contactsReducer } from './constacts/contactsSlice';
-import { filtersReducer } from './constacts/filtersSlice';
+import { contactsReducer } from './slice/contactsSlice';
+import { filtersReducer } from './slice/filtersSlice';
 
 const middleware = [
   ...getDefaultMiddleware({

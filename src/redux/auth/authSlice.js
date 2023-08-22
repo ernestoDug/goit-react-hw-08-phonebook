@@ -13,26 +13,28 @@ const fulfilder = (state, { payload }) => {
   state.user = payload.user;
   state.token = payload.token;
   state.isLoggedIn = true;
+  // console.log(payload.token);
 };
 // упішний вхід
-const fulfilderRefUser = (state, action) => {
-  state.user = action.payload;
+const fulfilderRefUser = (state, { payload }) => {
+  state.user = payload;
   state.isLoggedIn = true;
   state.isRefreshing = false;
+  // console.log(payload.token);
 };
 // успішний вихід
-const fulfilderLogOUT = (state) => {
+const fulfilderLogOUT = state => {
   state.user = { name: null, email: null };
   state.token = null;
   state.isLoggedIn = false;
 };
 
 // очикувач оновлення
-const pendingerRefresh = (state) => {
+const pendingerRefresh = state => {
   state.isRefreshing = true;
 };
 // облощик
-const rejector = (state) => {
+const rejector = state => {
   state.isRefreshing = false;
 };
 
@@ -47,8 +49,10 @@ const authSlice = createSlice({
       .addCase(logOut.fulfilled, fulfilderLogOUT)
       .addCase(refreshUser.fulfilled, fulfilderRefUser)
       .addCase(refreshUser.pending, pendingerRefresh)
+      .addCase(register.rejected, rejector)
+      .addCase(logIn.rejected, rejector)
+      .addCase(logOut.rejected, rejector)
       .addCase(refreshUser.rejected, rejector);
-    
   },
 });
 
