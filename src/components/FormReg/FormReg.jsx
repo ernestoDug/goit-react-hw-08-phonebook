@@ -1,3 +1,4 @@
+// https://connections-api.herokuapp.com/docs/#/User/post_users_signup
 import { useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
@@ -71,7 +72,7 @@ const FormReg = () => {
 
         <BodyStyle>
           <LabelStyle>
-            Email 📨
+            Поштова скринька 📨
             <InputStyle
               type="email"
               name="email"
@@ -97,8 +98,8 @@ const FormReg = () => {
           </LabelStyle>
         </BodyStyle>
 
-        <ButtonStyle type="submit">Регістрація 🪪</ButtonStyle>
-        <LinkForLog to="/login">Є акаунт? З🔔ходьте</LinkForLog>
+        <ButtonStyle type="submit"> Регістрація 🪪</ButtonStyle>
+        <LinkForLog to="/login"> Є акаунт? З🔔ходьте</LinkForLog>
       </FormStyle>
     </>
   );

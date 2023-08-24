@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { OverlayStyle, ContentStyle } from './Modal.module';
+import { motion } from "framer-motion"
+
+
+
 
 export const Modal = ({ children, onCloseModal }) => {
   // на закриття
@@ -27,8 +31,13 @@ export const Modal = ({ children, onCloseModal }) => {
 
   return (
     <OverlayStyle onClick={clicker}>
-      <ContentStyle>{children}</ContentStyle>
-    </OverlayStyle>
+    
+    <motion.div
+       animate={{ x: 40 }}
+       transition={{ type: 'spring', velocity: 2 }}
+      
+    >   <ContentStyle>{children}</ContentStyle> </motion.div >
+    </OverlayStyle> 
   );
 };
 

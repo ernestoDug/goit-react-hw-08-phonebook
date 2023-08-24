@@ -50,8 +50,7 @@ const authSlice = createSlice({
       .addCase(logOut.fulfilled, fulfilderLogOUT)
       .addCase(refreshUser.fulfilled, fulfilderRefUser)
       .addCase(logIn.rejected, rejector)
-      .addCase(logOut.rejected, rejector)
-      .addCase(refreshUser.rejected, rejector);
+        .addCase(refreshUser.rejected, rejector);
   },
 });
 

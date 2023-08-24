@@ -1,9 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
 import RestrictedRoute from './RestrictedRoute';
-import PrivateRoute from './PrivateRoute';
 import { lazy, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
 import { useDispatch } from 'react-redux';
-
 import { useAuth } from 'hooks/useAuth';
 import { refreshUser } from 'redux/auth/operations';
 import Layout from './Layout';
@@ -19,7 +18,7 @@ export const App = () => {
   
   const { isRefreshing } = useAuth();
 
-  //  запит 1
+  //  запит оновлення користувача
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);

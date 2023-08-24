@@ -62,7 +62,6 @@ export const NavLinkStyle = styled(NavLink)`
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 10px;
-  margin-left: 15px;
 
   opacity: 0.8;
   transform: rotate(-9deg);

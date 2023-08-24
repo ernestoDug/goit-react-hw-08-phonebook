@@ -50,7 +50,7 @@ const Contacts = () => {
       {isShowModalAddUser && (
         <Modal
           children={
-            <Section title="Add New Contact">
+            <Section title="Додати контакт">
               <ContactForm onCloseModal={handleOpenModal} />
             </Section>
           }

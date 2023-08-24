@@ -25,10 +25,10 @@ const LoginForm = () => {
         password: form.elements.password.value,
       })
     )
+      // для промісу віх діспатчу
       .unwrap()
       .then(originalPromiseResult => {
         // console.log(originalPromiseResult, "prm");
-        // ****************************************************************************
         toast.success(
           `🥁З Поверненням, друже ${originalPromiseResult.user.name}🥁`
         );
@@ -37,8 +37,8 @@ const LoginForm = () => {
         toast.warn(`⛔Спробуйте ще, сталася помилка⛔`);
       });
     form.reset();
-  }
-  
+  };
+
   return (
     <>
       {' '}
@@ -57,7 +57,7 @@ const LoginForm = () => {
       <FormStyle onSubmit={submiter} autoComplete="off">
         <BodyStyle>
           <LabelStyle>
-            Email 📨
+            Поштова скринька 📨
             <InputStyle
               type="email"
               name="email"
