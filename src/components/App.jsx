@@ -1,6 +1,7 @@
 import RestrictedRoute from './RestrictedRoute';
 import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+
 import PrivateRoute from './PrivateRoute';
 import { useDispatch } from 'react-redux';
 import { useAuth } from 'hooks/useAuth';
@@ -26,6 +27,7 @@ export const App = () => {
   return isRefreshing ? (
     <b className='loadMesg'> Оновлення...</b>
   ) : (
+
     <Routes>
       <Route path="/" element={<Layout/>}>
         <Route index element={<Home/>} />

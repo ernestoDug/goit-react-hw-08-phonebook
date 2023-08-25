@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from "framer-motion";
+
 
 import { fetchContacts } from 'redux/operations';
 import { selectError, selectIsLoading } from 'redux/selectors/selectors';
@@ -24,6 +26,7 @@ const Contacts = () => {
   const error = useSelector(selectError);
   const [isShowModalAddUser, setIsShowModalAddUser] = useState(false);
 
+
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -33,9 +36,19 @@ const Contacts = () => {
   };
 
   return (
+    <motion.div
+    className="box"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+    > 
     <WpapStyle>
         {isLoading && !error && <b>🚛Завантажую...🚧</b>}
-      <Section>
+      <Section key={Section}>
         <NavStyle>
           <TitleStyle>Контакти 📑</TitleStyle>
           <FiltrWrStyle>
@@ -48,6 +61,7 @@ const Contacts = () => {
         <ContactList />
       </Section>
       {isShowModalAddUser && (
+        
         <Modal
           children={
             <Section title="Додати контакт">
@@ -58,6 +72,7 @@ const Contacts = () => {
         ></Modal>
       )}
     </WpapStyle>
+    </motion.div>
   );
 };
 

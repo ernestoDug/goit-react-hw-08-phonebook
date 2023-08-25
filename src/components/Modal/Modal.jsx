@@ -31,12 +31,18 @@ export const Modal = ({ children, onCloseModal }) => {
 
   return (
     <OverlayStyle onClick={clicker}>
-    
-    <motion.div
-       animate={{ x: 40 }}
-       transition={{ type: 'spring', velocity: 2 }}
-      
-    >   <ContentStyle>{children}</ContentStyle> </motion.div >
+       <motion.div
+      className="box"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}       
+       >  
+     <ContentStyle>{children}</ContentStyle> 
+      </motion.div>
     </OverlayStyle> 
   );
 };
