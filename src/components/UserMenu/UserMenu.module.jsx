@@ -65,6 +65,8 @@ export const BtnStyle = styled.button`
   text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #eee425, -2px 0 2px #ebe413,
     0 -2px 2px #ead955, 3px 3px 2px #e6db0e, 0 3px 2px #8c1b21,
     0 4px 2px #f6db6d, -4px 0 2px #dcb424, 0 -4px 2px #8c1b21;
+    font-family: Oswald;
+
 
   background: radial-gradient(
     circle,

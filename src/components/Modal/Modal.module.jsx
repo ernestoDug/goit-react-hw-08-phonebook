@@ -23,11 +23,5 @@ export const ContentStyle = styled.div`
   overflow: hidden;
   padding-left: 30px;
   padding-right: 30px;
-  background: radial-gradient(
-    circle,
-    rgba(60, 119, 204, 0.8) 27%,
-    rgba(160, 211, 241, 0.8) 64%,
-    rgba(68, 159, 214, 0.8) 100%
-  );
-  z-index: 666;
+   z-index: 666;
 `;

@@ -99,6 +99,8 @@ export const ButtonStyle = styled.button`
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
   border-radius: 20px/60px;
   cursor: pointer;
+  font-family: Oswald;
+
   border: 2px dashed #ffb841;
 
   transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);

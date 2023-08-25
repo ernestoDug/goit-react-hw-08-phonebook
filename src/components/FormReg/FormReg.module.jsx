@@ -96,7 +96,7 @@ export const ButtonStyle = styled.button`
   font-size: 20px;
   font-weight: 700;
   align-items: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Oswald';
   margin: 15px 5px;
   padding: 10px;
   color: #533505;

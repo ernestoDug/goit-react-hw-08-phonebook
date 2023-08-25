@@ -45,19 +45,22 @@ export const NavContStyle = styled.nav`
   margin-left: 15px;
   margin-top: -5px;
 `;
-
 // спан,.
 export const SpanStyle = styled.span`
   background-color: white;
-  opacity: 0.9;
+  font-family: 'Oswald';
+;
+  opacity: 0.7;
+  padding-left: 5px;
   border-radius: 20px/60px;
+  text-shadow: 8px 1px 2px rgba(245, 138, 8, 0.5);
 `;
 
 // лінка
 export const NavLinkStyle = styled(NavLink)`
   display: inline-block;
   padding: 22px 28px;
-  color: #614715;
+  color: #cb500d;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
   font-size: 20px;

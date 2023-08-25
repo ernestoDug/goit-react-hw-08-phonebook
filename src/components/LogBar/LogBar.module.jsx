@@ -14,6 +14,7 @@ export const ItemStyle = styled.li``;
 export const LinkForLogStyle = styled(NavLink)`
   display: flex;
   font-size: 16px;
+  font-family: Oswald;
   font-weight: 700;
   align-items: center;
   margin: 15px 5px;

@@ -36,6 +36,7 @@ export const InputStyle = styled.input`
     rgba(68, 159, 214, 1) 100%
   );
   margin: 5px;
+  margin-right: 15px;
   border-style: none;
 
   :placeholder {

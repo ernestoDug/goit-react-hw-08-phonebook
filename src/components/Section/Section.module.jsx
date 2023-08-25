@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+
 // секція
 export const SectionWrStyle = styled.section`
   margin: auto;
@@ -18,20 +19,10 @@ export const TitleStyle = styled.h2`
   font-size: 40px;
   color: #e3dcea;
   letter-spacing: 5px;
-  text-shadow: 
-    2px 2px 2px #c48e06, 
-    0 2px 2px #8c1b21, 
-    -2px 0 2px #8c1b21, 
-     0 -2px 2px #8c1b21,    
-    3px 3px 2px #8c1b21, 
-    0 3px 2px #8c1b21, 
-    -3px 0 2px #8c1b21, 
-    0 -3px 2px #8c1b21,
-    4px 4px 2px #8c1b21, 
-    0 4px 2px #8c1b21, 
-    -4px 0 2px #8c1b21, 
-    0 -4px 2px #8c1b21;
-  
+  text-shadow: 7px 1px 2px rgba(30, 128, 161, 0.5);
+  font-family: Oswald;
+;
+
   text-align: center;
   margin: 0;
 `;
