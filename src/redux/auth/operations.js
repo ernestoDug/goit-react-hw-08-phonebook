@@ -23,7 +23,7 @@ export const refreshUser = createAsyncThunk(
     if (persistedToken === null)
       return thunkAPI.rejectWithValue('Не вдалося отримати данні користувача');
     try {
-      // закид хедеру з ток
+      // закид хедеру з токеном
       setAuthHeader(persistedToken);
       const { data } = await axios.get('/users/current');
       return data;

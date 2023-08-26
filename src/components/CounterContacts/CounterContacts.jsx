@@ -1,6 +1,9 @@
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { selectContacts } from 'redux/selectors/selectors';
-import { CounterContactsStyle } from 'components/CounterContacts/CounterContacts.module';
+import {
+  CounterContactsStyle,
+  SpanStyle,
+} from 'components/CounterContacts/CounterContacts.module';
 
 const CounterContacts = () => {
   const contacts = useSelector(selectContacts);
@@ -9,7 +12,7 @@ const CounterContacts = () => {
     <>
       <CounterContactsStyle>
         {' '}
-        📝Контактів в книзі: {contacts.length}{' '}
+        📝<SpanStyle>Контактів в книзі: {contacts.length} </SpanStyle>
       </CounterContactsStyle>
     </>
   );

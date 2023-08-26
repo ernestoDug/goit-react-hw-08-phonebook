@@ -3,7 +3,6 @@ import {
   LogoStyle,
   NavContStyle,
   NavLinkStyle,
-  SpanStyle,
   BodyStyle,
 } from './NavBar.module';
 
@@ -18,7 +17,7 @@ const NavBar = () => {
         {isLoggedIn && (
           <NavLinkStyle to="/contacts">
             {' '}
-            <SpanStyle>Контакти </SpanStyle>📑
+       Контакти 📑
           </NavLinkStyle>
         )}
       </NavContStyle>

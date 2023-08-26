@@ -23,20 +23,24 @@ export const NameStyle = styled.p`
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-right: 18px;
+  letter-spacing: 5px;
   margin-top: 18px;
-  text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #8c1b21, -2px 0 2px #8c1b21,
-    0 -2px 2px #8c1b21, 3px 3px 2px #8c1b21, 0 3px 2px #8c1b21,
-    -3px 0 2px #8c1b21, 0 -3px 2px #8c1b21, 4px 4px 2px #8c1b21,
-    0 4px 2px #8c1b21, -4px 0 2px #8c1b21, 0 -4px 2px #8c1b21;
+  text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #134eb6, -2px 0 2px #8c1b21,
+    0 -2px 2px #2f39e7, 3px 3px 2px #8c1b21, 0 3px 2px #8c1b21,
+    0 4px 2px #8c1b21, -4px 0 2px #102f81, 0 -4px 2px #2d16af;
   text-align: center;
   color: #cf8b16;
 `;
 // пошта
 export const EmailStyle = styled.p`
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
-  color: #e3f4e5;
+  color: #eeeff5;
+  text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #134eb6, -2px 0 2px #8c1b21,
+    0 4px 2px #8c1b21, -4px 0 2px #102f81, 0 -4px 2px #2d16af;
   margin-left: 15px;
+  letter-spacing: 2px;
+
 `;
 
 // для авочки

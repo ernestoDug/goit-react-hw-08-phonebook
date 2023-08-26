@@ -29,7 +29,7 @@ const fulfilderLogOUT = state => {
   state.isLoggedIn = false;
 };
 
-// очикувач 
+// очикувач
 const pendingerRefresh = state => {
   state.isRefreshing = true;
 };
@@ -44,13 +44,13 @@ const authSlice = createSlice({
   initialState: initialState,
   extraReducers: builder => {
     builder
-    .addCase(refreshUser.pending, pendingerRefresh)
+      .addCase(refreshUser.pending, pendingerRefresh)
       .addCase(register.fulfilled, fulfilder)
       .addCase(logIn.fulfilled, fulfilder)
       .addCase(logOut.fulfilled, fulfilderLogOUT)
       .addCase(refreshUser.fulfilled, fulfilderRefUser)
       .addCase(logIn.rejected, rejector)
-        .addCase(refreshUser.rejected, rejector);
+      .addCase(refreshUser.rejected, rejector);
   },
 });
 

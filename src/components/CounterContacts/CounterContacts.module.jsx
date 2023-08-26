@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 
-// форма
 export const CounterContactsStyle = styled.p`
   font-size: 20px;
   padding: 9px;
@@ -9,13 +8,15 @@ export const CounterContactsStyle = styled.p`
   margin-bottom: -40px;
   font-weight: 800px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #e7f1e3;
-  text-shadow: 7px 1px 2px rgba(25, 163, 209, 0.5);
+  color: #eff0f4;
   display: inline-block;
-  width: 200px;
+  width: 100px;
   text-align: center;
-  background-image: url('https://bogatyr.club/uploads/posts/2023-06/1688104468_bogatyr-club-p-kozhanaya-zaplatka-foni-pinterest-37.jpg');
+  background-image: url('https://viplabels.ru/images/birki-na-odejdu.jpg');
   background-size: contain;
+`;
+export const SpanStyle = styled.span`
+  background-color: #100f0f;
   border-radius: 20px/60px;
-  border: 2px dashed #ffb841;
+  opacity: 0.8;
 `;
