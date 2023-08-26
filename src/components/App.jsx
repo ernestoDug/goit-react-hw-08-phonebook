@@ -14,9 +14,8 @@ const LogPg = lazy(() => import('Pages/Login/Login'));
 const ContPg = lazy(() => import('Pages/Contacts/Contacts'));
 
 export const App = () => {
-  
   const dispatch = useDispatch();
-  
+
   const { isRefreshing } = useAuth();
 
   //  запит оновлення користувача
@@ -25,32 +24,29 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b className='loadMesg'> Оновлення...</b>
+    <b className="loadMesg"> 🌀новлення...</b>
   ) : (
-
     <Routes>
-      <Route path="/" element={<Layout/>}>
-        <Route index element={<Home/>} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
 
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/login" component={<RegPg/>} />
+            <RestrictedRoute redirectTo="/login" component={<RegPg />} />
           }
         />
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/contacts" component={<LogPg/>} />
+            <RestrictedRoute redirectTo="/contacts" component={<LogPg />} />
           }
         />
         <Route
           path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ContPg/>} />
-          }
+          element={<PrivateRoute redirectTo="/login" component={<ContPg />} />}
         />
-        <Route path="*" element={<Home/>} />
+        <Route path="*" element={<Home />} />
       </Route>
     </Routes>
   );
