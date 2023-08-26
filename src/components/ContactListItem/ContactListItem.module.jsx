@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 
-
 export const ContactItemStyle = styled.li`
   display: flex;
   flex-direction: column;
@@ -26,11 +25,10 @@ export const ContactNameStyle = styled.p`
   font-weight: 500;
   border-radius: 20px/60px;
   padding: 7px;
-
 `;
 
 export const ContactNumberStyle = styled.p`
- display: flex;
+  display: flex;
   align-items: center;
   color: #665813;
   font-size: 14px;
@@ -42,11 +40,6 @@ export const ContactNumberStyle = styled.p`
   padding: 7px;
 `;
 
-
-
-
-
-
 export const ButtonStyle = styled.button`
   display: flex;
   font-size: 16px;
@@ -55,7 +48,7 @@ export const ButtonStyle = styled.button`
   margin: 15px 5px;
   color: #f7e32d;
   padding: 5px;
-background-color: #74500c;
+  background-color: #74500c;
 
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -78,8 +71,6 @@ background-color: #74500c;
     background-color: #e11212;
   }
 `;
-
-
 
 export const Button = styled.button`
   font-weight: 700;

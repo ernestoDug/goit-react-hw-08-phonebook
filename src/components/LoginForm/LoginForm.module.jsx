@@ -66,7 +66,7 @@ export const LinkForLogStyle = styled(NavLink)`
   letter-spacing: 3px;
   transform: rotate(-9deg);
   border: 2px dashed #ffb841;
-transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
+  transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
   cursor: pointer;
 
   :hover,
@@ -74,16 +74,14 @@ transition: all 200ms cubic-bezier(0.6, 0, 0.4, 1);
     color: #f4f6f3;
     background-image: none;
     background: linear-gradient(
-    90deg,
-    rgba(60, 119, 204, 1) 31%,
-    rgba(68, 159, 214, 1) 60%,
-    rgba(0, 168, 255, 1) 100%
-  );
-  transform: rotate(0);
-
+      90deg,
+      rgba(60, 119, 204, 1) 31%,
+      rgba(68, 159, 214, 1) 60%,
+      rgba(0, 168, 255, 1) 100%
+    );
+    transform: rotate(0);
   }
 `;
-
 // кнопка ************************
 export const ButtonStyle = styled.button`
   display: flex;
@@ -100,9 +98,7 @@ export const ButtonStyle = styled.button`
   border-radius: 20px/60px;
   cursor: pointer;
   font-family: Oswald;
-
   border: 2px dashed #ffb841;
-
   transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 200ms cubic-bezier(0.6, 0, 0.4, 1);
   transition: border 200ms cubic-bezier(0.6, 0, 0.4, 1);

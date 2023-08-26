@@ -4,10 +4,10 @@ const LogBar = () => {
   return (
     <LogBarListStyle>
       <ItemStyle>
-        <LinkForLogStyle to="login">Логін</LinkForLogStyle>
+        <LinkForLogStyle to="login">Логін 🔑</LinkForLogStyle>
       </ItemStyle>
       <ItemStyle>
-        <LinkForLogStyle to="register">Регістрація</LinkForLogStyle>
+        <LinkForLogStyle to="register">Реєстрація ↩️</LinkForLogStyle>
       </ItemStyle>
     </LogBarListStyle>
   );

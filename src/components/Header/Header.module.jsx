@@ -4,8 +4,6 @@ export const HeaderStyle = styled.header`
   display: flex;
   flex-direction: column;
   border-radius: 20px/60px;
-  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
-    10px 10px 10px 2px rgba(34, 60, 80, 0.2);
   border: 2px dashed #ffb841;
   margin-top: 8px;
   background: linear-gradient(

@@ -88,7 +88,7 @@ export const LinkForLog = styled(NavLink)`
     );
     transform: scale(1.1);
   }
-  `;
+`;
 
 // кнопка
 export const ButtonStyle = styled.button`
@@ -123,6 +123,6 @@ export const ButtonStyle = styled.button`
       rgba(68, 159, 214, 1) 60%,
       rgba(0, 168, 255, 1) 100%
     );
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
 `;

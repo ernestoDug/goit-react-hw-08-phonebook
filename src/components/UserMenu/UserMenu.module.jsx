@@ -61,11 +61,10 @@ export const BtnStyle = styled.button`
   align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: 10px;
-  color: #e9e9e0;
+  color: #e9e8e0;
   text-shadow: 2px 2px 2px #c48e06, 0 2px 2px #d7cd0d, -2px 0 2px #ebe413;
 
-    font-family: Oswald;
-
+  font-family: 'Oswald';
 
   background: radial-gradient(
     circle,
@@ -75,7 +74,7 @@ export const BtnStyle = styled.button`
   );
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
-    width: 80px;
+  width: 80px;
   border-radius: 100px/100px;
   cursor: pointer;
 
@@ -88,6 +87,6 @@ export const BtnStyle = styled.button`
     color: #533505;
     background-image: none;
     background: linear-gradient(90deg, #b6a013 31%, #ecec08 60%, #dfa909 100%);
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 `;

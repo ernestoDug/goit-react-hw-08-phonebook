@@ -29,6 +29,7 @@ export const LogoStyle = styled(NavLink)`
       rgba(68, 159, 214, 1) 60%,
       rgba(0, 168, 255, 1) 100%
     );
+    opacity: 0.7;
   }
 `;
 
@@ -47,24 +48,22 @@ export const NavContStyle = styled.nav`
 `;
 // спан,.
 export const SpanStyle = styled.span`
-  background-color: white;
-  font-family: 'Oswald';
-;
-  opacity: 0.7;
+  background-color: #0c0c0c;
   padding-left: 5px;
+  padding-right: 5px;
   border-radius: 20px/60px;
-  text-shadow: 8px 1px 2px rgba(245, 138, 8, 0.5);
 `;
 
 // лінка
 export const NavLinkStyle = styled(NavLink)`
   display: inline-block;
   padding: 22px 28px;
-  color: #cb500d;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: transparent;
+  font-family: 'Oswald';
   font-weight: 800;
   font-size: 20px;
   margin-bottom: 10px;
+  color: white;
 
   opacity: 0.8;
   transform: rotate(-9deg);
@@ -77,7 +76,7 @@ export const NavLinkStyle = styled(NavLink)`
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    color: #b80e2d;
+    color: #c68f99;
     background-image: none;
     background: linear-gradient(
       90deg,

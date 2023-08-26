@@ -20,8 +20,8 @@
 
 body {
   margin: 0;
-  font-family: Oswald, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-image: url('https://pazlyigra.ru/uploads/posts/2021-07/thumbs/1625467812__original.jpg');
   -webkit-font-smoothing: antialiased;
@@ -46,10 +46,8 @@ p {
   margin: 0;
 }
 
-
-.loadMesg
-{
-  color: rgb(42, 42, 115);
+.loadMesg {
+  color: rgb(199, 123, 30);
   font-size: 20px;
   font-weight: 700;
 }

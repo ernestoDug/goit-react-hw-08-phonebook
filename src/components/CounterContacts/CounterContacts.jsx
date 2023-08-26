@@ -4,7 +4,6 @@ import { CounterContactsStyle } from 'components/CounterContacts/CounterContacts
 
 const CounterContacts = () => {
   const contacts = useSelector(selectContacts);
-  // const loading = useSelector(selectIsLoading);
 
   return (
     <>
@@ -12,7 +11,6 @@ const CounterContacts = () => {
         {' '}
         📝Контактів в книзі: {contacts.length}{' '}
       </CounterContactsStyle>
-      {/* {loading === true && <p className="loading">🚧Завантажую🚚...</p>} */}
     </>
   );
 };

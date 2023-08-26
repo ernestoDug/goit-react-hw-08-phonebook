@@ -12,7 +12,7 @@ import { useAuth } from 'hooks/useAuth';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
-  
+
   const { user } = useAuth();
 
   return (
@@ -25,7 +25,7 @@ const UserMenu = () => {
         <AvStyle></AvStyle>
       </AvDivStyle>
       <BtnStyle type="button" onClick={() => dispatch(logOut())}>
-      Вийти 👣
+        Вийти 👣
       </BtnStyle>
     </NavStyle>
   );

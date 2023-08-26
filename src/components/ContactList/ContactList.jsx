@@ -1,14 +1,11 @@
 import { useSelector } from 'react-redux';
-
 import {
   selectContactsFilter,
   selectContacts,
 } from 'redux/selectors/selectors';
-
 import { ContactsListItem } from '../ContactListItem/ContactListItem';
-
-import { ContactsListStyle } from './ContactsListStyle.module';
 import CounterContacts from 'components/CounterContacts/CounterContacts';
+import { ContactsListStyle } from './ContactsListStyle.module';
 
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -18,14 +15,13 @@ export const ContactList = () => {
   ];
 
   return (
-    <> 
-    
-    <CounterContacts/>
-    <ContactsListStyle>
-      {filtrat.map(({ name, number, id }) => (
-        <ContactsListItem key={id} id={id} name={name} number={number} />
-      ))}
-    </ContactsListStyle>
+    <>
+      <CounterContacts />
+      <ContactsListStyle>
+        {filtrat.map(({ name, number, id }) => (
+          <ContactsListItem key={id} id={id} name={name} number={number} />
+        ))}
+      </ContactsListStyle>
     </>
   );
 };

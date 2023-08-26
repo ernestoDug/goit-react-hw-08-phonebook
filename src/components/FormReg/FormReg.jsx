@@ -3,9 +3,7 @@ import { useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { register } from 'redux/auth/operations';
-
 import {
   BodyStyle,
   FormStyle,
@@ -28,15 +26,15 @@ const FormReg = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    ).unwrap()
-      // ##########################/w
+    )
+      // для промісу
+      .unwrap()
       .then(originalPromiseResult => {
         toast.success(`🥁${originalPromiseResult.user.name}вітаємо вас🥁`);
       })
       .catch(() => {
         toast.warn(`⛔Спробуйте ще, сталася помилка⛔`);
       });
-
     form.reset();
   };
 
@@ -98,7 +96,7 @@ const FormReg = () => {
           </LabelStyle>
         </BodyStyle>
 
-        <ButtonStyle type="submit"> Регістрація 🪪</ButtonStyle>
+        <ButtonStyle type="submit"> Реєстрація 🪪</ButtonStyle>
         <LinkForLog to="/login"> Є акаунт? З🔔ходьте</LinkForLog>
       </FormStyle>
     </>

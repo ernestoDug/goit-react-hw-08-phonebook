@@ -23,5 +23,5 @@ export const ContentStyle = styled.div`
   overflow: hidden;
   padding-left: 30px;
   padding-right: 30px;
-   z-index: 666;
+  z-index: 666;
 `;

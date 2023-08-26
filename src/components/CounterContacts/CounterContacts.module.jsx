@@ -10,6 +10,7 @@ export const CounterContactsStyle = styled.p`
   font-weight: 800px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #e7f1e3;
+  text-shadow: 7px 1px 2px rgba(25, 163, 209, 0.5);
   display: inline-block;
   width: 200px;
   text-align: center;
