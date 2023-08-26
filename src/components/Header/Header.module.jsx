@@ -7,7 +7,7 @@ export const HeaderStyle = styled.header`
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset,
     10px 10px 10px 2px rgba(34, 60, 80, 0.2);
   border: 2px dashed #ffb841;
-  margin-top: 10px;
+  margin-top: 8px;
   background: linear-gradient(
     90deg,
     rgba(60, 119, 204, 1) 31%,

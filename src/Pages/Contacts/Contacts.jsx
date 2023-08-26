@@ -1,17 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion } from "framer-motion";
-
-
 import { fetchContacts } from 'redux/operations';
 import { selectError, selectIsLoading } from 'redux/selectors/selectors';
-
 import { Section } from '../../components/Section/Section';
 import { ContactForm } from '../../components/ContactForm/ContactForm';
 import { Filter } from '../../components/Filter/Filter';
 import { ContactList } from '../../components/ContactList/ContactList';
 import {
-  // AddUserIcon,
   ButtonStyle,
   WpapStyle,
   NavStyle,

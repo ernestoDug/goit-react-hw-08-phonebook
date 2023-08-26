@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <HeaderStyle>
       <Navigation />
-      {/* залогенівся тоді на тобі */}
+      {/* залогенівся тоді тобі туди */}
       {isLoggedIn ? <UserMenu /> : <LoggedNav />}
     </HeaderStyle>
   );
