@@ -15,6 +15,7 @@ import {
 
 export const ContactForm = ({ onCloseModal }) => {
   const dispatch = useDispatch();
+
   const contacts = useSelector(selectContacts);
 
   // відправник
@@ -24,7 +25,10 @@ export const ContactForm = ({ onCloseModal }) => {
     const formName = form.elements.name.value;
     const formNumber = form.elements.number.value;
     if (contacts.some(({ name }) => name === formName)) {
-      toast.warn(`🥁 Уважніше, ${formName}  вже Є в конТАКтах 🥁`);
+      return toast.warn(`🥁 Уважніше, ${formName}  вже Є в конТАКтах 🥁`);
+    }
+    if (contacts.some(({ number }) => number === formNumber)) {
+      return toast.warn(`🥁 Уважніше, ${formNumber}  вже Є в конТАКтах 🥁`);
     }
     // console.log(formNumber, formNumber);
     dispatch(addContact({ name: formName, number: formNumber.toString() }))
